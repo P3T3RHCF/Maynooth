@@ -1,0 +1,80 @@
+$yellow: #F3B541;
+$cyan: #4CB3AA;
+$purple: #842C68;
+$pink: #CC4C6E;
+
+$nav-height: 70px;
+$border-radius: 5px;
+$font-size-regular: 30px;
+$back-color-white: rgba(white, .7);
+
+@mixin nav-pink ($leftpos){
+    background: $pink;
+    content: "";
+    height: $nav-height;
+    position: absolute;
+    top: 0;
+    left: $leftpos;
+    transform: skew(-30deg);
+    width: 40px;
+}
+
+@mixin search-field{
+    line-height: 50px;
+    color: black;
+    font-size: $font-size-regular;
+}
+
+@mixin boxmix{
+    text-align: center;
+    border-radius: $border-radius;
+    border: 3px solid;
+    background-color: $back-color-white;
+
+    p{
+        font-size: 40px;
+
+        @media (max-width: 1800px) {
+            font-size: 37px;
+        }
+
+        @media (max-width: 1700px) {
+            font-size: 35px;
+        }
+
+        @media (max-width: 1400px) {
+            font-size: $font-size-regular;
+        }
+    }
+
+    i{
+        font-size: 75px;
+        margin-top: 50px;
+
+        @media (max-width: 1800px) {
+            font-size: 70px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 1700px) {
+            font-size: 65px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 1400px) {
+            font-size: 55px;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 1300px) {
+            font-size: 50px;
+        }
+    }
+}
+
+@mixin footer-Sections{
+    list-style: none;
+    margin: 2px 0;
+    font-weight: 200;
+    color: black;
+}
